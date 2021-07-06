@@ -1,5 +1,6 @@
 ﻿using System;
-
+using System.Collections.Generic;
+using System.Text;
 
 namespace try_catch_finally
 {
@@ -7,28 +8,44 @@ namespace try_catch_finally
     {
         static void Main(string[] args)
         {
-            // Ask the user for two numbers, x and y
-            Console.WriteLine("Enter x:");
-            int.TryParse(Console.ReadLine(), out int x);
-            Console.WriteLine("Enter y:");
-            int.TryParse(Console.ReadLine(), out int y);
-            // Try dividing x by y - catch exceptions when it goes wrong
+            IPerson dane_osobowe = new Person();
+            uczen dane_ucznia = new uczen();
+            dane_ucznia.imie = "Kacper";
+            dane_ucznia.nazwisko = "Mackowiak";
+            
+
             try
             {
-                int result = x / y;
+                dane_ucznia.wiek = 21;
             }
-            catch (DivideByZeroException ex)
+            catch (Exception e)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine(e.Message);
             }
-            catch // or catch (Exception) or catch (Exception ex)
-            {
-                Console.WriteLine("Some general exception!");
+            finally {
+                Console.WriteLine(dane_ucznia);
             }
-            finally
-            {
-                Console.WriteLine("This is always executed. Closing the app.");
+            foreach (var item in getPeople()) {
+                StringBuilder text = new StringBuilder();
+                text.Append($"{item.imie} {item.nazwisko} {item.wiek}");
+                if(item is Nauczyciel n)
+                {
+                    text.Append($" {n.przedmiot}");
+                }
+                else if(item is uczen u)
+                {
+                    text.Append($" {u.klasa} {u.uczelnia}");
+                }
+                Console.WriteLine(text.ToString());
             }
+        }
+
+        public static List<IPerson> getPeople()
+        {
+            List<IPerson> output = new List<IPerson>();
+            output.Add(new uczen() { imie = "Dawid", nazwisko = "Król", klasa = "Ii", wiek = 20, uczelnia = "AGH" });
+            output.Add(new Nauczyciel() { imie = "Jacek", nazwisko = "Mosakowski", wiek=null, przedmiot = "C#" });
+            return output;
         }
     }
 }
