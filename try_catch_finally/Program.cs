@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace try_catch_finally
+namespace program_v1
 {
     class Program
     {
@@ -28,11 +28,11 @@ namespace try_catch_finally
             foreach (var item in getPeople()) {
                 StringBuilder text = new StringBuilder();
                 text.Append($"{item.imie} {item.nazwisko} {item.wiek}");
-                if(item is Nauczyciel n)
+                if(item is INauczyciel n)
                 {
                     text.Append($" {n.przedmiot}");
                 }
-                else if(item is uczen u)
+                else if(item is Iuczen u)
                 {
                     text.Append($" {u.klasa} {u.uczelnia}");
                 }

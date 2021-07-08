@@ -1,4 +1,4 @@
-﻿namespace try_catch_finally
+﻿namespace program_v1
 {
     public interface IPerson
     {

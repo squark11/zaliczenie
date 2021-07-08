@@ -2,10 +2,20 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace try_catch_finally
+namespace program_v1
 {
     public class Person : IPerson
     {
+        public Person()
+        {
+
+        }
+        public Person(string Imie, string Nazwisko, int Wiek)
+        {
+           imie = Imie;
+           nazwisko = Nazwisko;
+           wiek = Wiek;
+        }
         private int? _wiek;
         public string imie { get; set; }
         public string nazwisko { get; set; }

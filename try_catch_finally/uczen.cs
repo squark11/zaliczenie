@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace try_catch_finally
+namespace program_v1
 {
     public class uczen : Person, Iuczen
     {
