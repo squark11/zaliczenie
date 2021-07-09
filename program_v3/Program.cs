@@ -29,7 +29,7 @@ namespace program_v3
             Stack<IPerson> lista = new Stack<IPerson>();
             lista.Push(new Person("Krzysztof", "Stanowski", 31));
             lista.Push(new Person("Krzysztof", "Nowak", 27));
-            lista.Push(new Person("Krzysztof", "dsasdsa", 29));
+            lista.Push(new Person("Krzysztof", "Ibisz", 29));
 
             IPerson person = lista.Pop();
 

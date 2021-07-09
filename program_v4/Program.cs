@@ -12,9 +12,16 @@ namespace program_v4
             podium.Add(3, "Jacek");
             podium.Add(1, "Dawid");
 
-            Console.WriteLine(podium.GetValueOrDefault(3));
+            Console.WriteLine("Przed sortowaniem: ");
+            foreach (var item in podium)
+            {
+                Console.WriteLine(item);
 
+            }
+            Console.WriteLine(" ");
+            
             SortedList<int, string> sortedPodium = new SortedList<int, string>(podium);
+            Console.WriteLine("Po sortowaniu: ");
             foreach (var item in sortedPodium) {
                 Console.WriteLine(item);
             }

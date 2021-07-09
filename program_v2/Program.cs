@@ -11,7 +11,7 @@ namespace program_v2
             Console.WriteLine(kwadrat(ref a)); 
             Console.WriteLine(a);
         }
-       // params - tworzenie tablicy z wartości i przesyłanie parametrów przez wartość
+       // params - tworzenie tablicy z wartości, przesyłanie parametrów przez wartość
         public static decimal? mnozenie(params decimal[] wartosci) { 
             decimal output = 1;
             if (wartosci.Length <= 0) {

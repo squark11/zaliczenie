@@ -43,8 +43,8 @@ namespace program_v1
         public static List<IPerson> getPeople()
         {
             List<IPerson> output = new List<IPerson>();
-            output.Add(new uczen() { imie = "Dawid", nazwisko = "Król", klasa = "Ii", wiek = 20, uczelnia = "AGH" });
-            output.Add(new Nauczyciel() { imie = "Jacek", nazwisko = "Mosakowski", wiek=null, przedmiot = "C#" });
+            output.Add(new uczen() { imie = "Dawid", nazwisko = "Nowak", klasa = "Ii", wiek = 20, uczelnia = "AGH" });
+            output.Add(new Nauczyciel() { imie = "Jacek", nazwisko = "Mosakowski", wiek=null, przedmiot = "Wprowadzenie do programowaia" });
             return output;
         }
     }
